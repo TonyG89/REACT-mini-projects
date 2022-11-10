@@ -28,7 +28,6 @@ function App() {
 
   const onClickPlus = (id) => {
     if (invites.includes(id)) {
-      console.log(id);
       setInvites(prev => prev.filter(_id => _id !== id))
     } else
       setInvites(prev => [...prev, id])
@@ -36,6 +35,7 @@ function App() {
 
   const onClickSend = () => {
     setSuccess(!success)
+    setInvites([])
   }
 
   return (
